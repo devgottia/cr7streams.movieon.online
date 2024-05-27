@@ -88,7 +88,7 @@ function copyToClipBoard(id, title) {
 
   index = index + 1
 
-  const url = `https://cr7streams.movieon.online/live/channel.html?match_id=${id}&title=${title}`;
+  const url = `https://cr7streams.movieon.online/live/channel.html?match_id=${id}&title=${title}&index=${index}`;
 
   window.navigator.clipboard.writeText(url);
 }
