@@ -82,7 +82,12 @@ $.ajax({
     window.location.reload();
   });
 
+let index = 0
+
 function copyToClipBoard(id, title) {
+
+  index = index + 1
+
   const url = `https://cr7streams.movieon.online/live/channel.html?match_id=${id}&title=${title}`;
 
   window.navigator.clipboard.writeText(url);
