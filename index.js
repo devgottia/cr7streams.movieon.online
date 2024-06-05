@@ -33,7 +33,7 @@ $.ajax({
 
 
               <div class="btn-group w-100">
-              <button class="btn btn-success watchBtn" data-link="https://cr7streams.movieon.online/live/channel.html?match_id=${
+              <button class="btn btn-success watchBtn" data-link="https://gottia.instadown.site/p/live.html?match_id=${
                 event.channel_id
               }&title=${encodeURI(event.match)}" >Watch</button>
 
@@ -88,7 +88,7 @@ function copyToClipBoard(id, title) {
 
   index = index + 1
 
-  const url = `https://cr7streams.movieon.online/live/channel.html?match_id=${id}&title=${title}&index=${index}`;
+  const url = `https://gottia.instadown.site/p/live.html?match_id=${id}&title=${title}&index=${index}`;
 
   window.navigator.clipboard.writeText(url);
 }
