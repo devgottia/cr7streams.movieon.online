@@ -323,9 +323,7 @@
     <script>
 const urlParams = new URLSearchParams(window.location.search);
 
-const id = urlParams.get("match_id");
-const title = urlParams.get("title");
-const index = urlParams.get("index");
+const id = urlParams.get("ch");
 
 const iframe = document.createElement("iframe");
 iframe.id = "livePlayer";
@@ -336,13 +334,6 @@ iframe.scrolling = "no";
 iframe.allowTransparency = true;
 
 document.querySelector("#player").innerHTML= iframe;
-
-if (index) {
-  document.title = `${title} Live - ${index}`;
-} else {
-  document.title = `${title}`;
-}
-
 
 </script>
     
