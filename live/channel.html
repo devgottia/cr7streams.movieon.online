@@ -321,21 +321,28 @@
 
 
     <script>
-const urlParams = new URLSearchParams(window.location.search);
+        <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const myParam = urlParams.get("ch");
 
-const id = urlParams.get("ch");
+      if (urlParams.has("match")) {
+        const sTitle = urlParams.get("match");
+        document.title = sTitle;
+        
+        document.querySelector(".post-title").innerText = sTitle
+      }
 
-const iframe = document.createElement("iframe");
-iframe.id = "livePlayer";
-iframe.frameBorder = "0";
-iframe.src = `https://s1.sportea.link/live/embed.php?ch=${id}`;
-iframe.allowFullScreen = true;
-iframe.scrolling = "no";
-iframe.allowTransparency = true;
+      let dPlayer = document.querySelector("#player");
 
-document.querySelector("#player").innerHTML= iframe;
-
-</script>
+      dPlayer.innerHTML = `
+         
+         
+ <iframe frameborder=0 width=640 height=480 src="https://s1.sportea.link/live/embed.php?ch=${myParam}" allowfullscreen scrolling=no allowtransparency></iframe>      
+ 
+ 
+ `;
+    </script>
+    
     
   </body>
 </html>
